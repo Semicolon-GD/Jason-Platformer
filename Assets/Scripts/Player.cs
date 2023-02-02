@@ -9,10 +9,12 @@ public class Player : MonoBehaviour
     [SerializeField] int _maxJumps = 2;
     [SerializeField] Transform _feet;
     [SerializeField] float _downPull=5;
+    [SerializeField] float _maxJumpDuration=.1f;
 
     Vector2 _startPosition;
     int _jumpsRemaining;
     float _fallTimer;
+    float _jumpTimer;
     
 
     void Start()
@@ -23,7 +25,9 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        
+        var hit = Physics2D.OverlapCircle(_feet.position, .1f, LayerMask.GetMask("Default"));
+        bool isGrounded = hit != null;
+
         var horizontal = Input.GetAxis("Horizontal")*_speed;
         var rigidbody2D = GetComponent<Rigidbody2D>();
         if (Mathf.Abs(horizontal)>=1)
@@ -48,9 +52,15 @@ public class Player : MonoBehaviour
             rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x,_jumpVelocity);
             _jumpsRemaining--;
             _fallTimer = 0;
+            _jumpTimer = 0;
         }
-        var hit = Physics2D.OverlapCircle(_feet.position, .1f, LayerMask.GetMask("Default"));
-        bool isGrounded = hit != null;
+        else if (Input.GetButton("Jump") && _jumpTimer<=_maxJumpDuration)
+        {
+            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, _jumpVelocity);
+            _fallTimer = 0;
+            _jumpTimer += Time.deltaTime;
+        }
+        
 
         if (isGrounded)
         {
