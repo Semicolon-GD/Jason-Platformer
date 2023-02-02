@@ -1072,6 +1072,7 @@ GameObject:
   - component: {fileID: 1712881491}
   - component: {fileID: 1712881490}
   - component: {fileID: 1712881489}
+  - component: {fileID: 1712881492}
   m_Layer: 0
   m_Name: flyFly1
   m_TagString: Untagged
@@ -1159,13 +1160,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1712881488}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.34, y: 0.41, z: 0}
+  m_LocalPosition: {x: 3.34, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1712881492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712881488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34607dfb5be6f3d4e81b290790d8ac3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1747938352 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3067225344009070910, guid: ffde464597ac6a44ebb07439ad8f3422, type: 3}
