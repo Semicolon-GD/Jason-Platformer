@@ -1447,11 +1447,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3067225344009070910, guid: ffde464597ac6a44ebb07439ad8f3422, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.55
+      value: -3.104
       objectReference: {fileID: 0}
     - target: {fileID: 3067225344009070910, guid: ffde464597ac6a44ebb07439ad8f3422, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.39
+      value: -1.426
       objectReference: {fileID: 0}
     - target: {fileID: 3067225344009070910, guid: ffde464597ac6a44ebb07439ad8f3422, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1483,6 +1483,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3067225344009070910, guid: ffde464597ac6a44ebb07439ad8f3422, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067225344009070911, guid: ffde464597ac6a44ebb07439ad8f3422, type: 3}
+      propertyPath: m_UseOneWay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067225344009070911, guid: ffde464597ac6a44ebb07439ad8f3422, type: 3}
+      propertyPath: m_UseSideBounce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067225344009070911, guid: ffde464597ac6a44ebb07439ad8f3422, type: 3}
+      propertyPath: m_UseSideFriction
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3067225344009071043, guid: ffde464597ac6a44ebb07439ad8f3422, type: 3}
@@ -2588,6 +2600,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3067225344009070910, guid: ffde464597ac6a44ebb07439ad8f3422, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067225344009070911, guid: ffde464597ac6a44ebb07439ad8f3422, type: 3}
+      propertyPath: m_UseOneWay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067225344009070911, guid: ffde464597ac6a44ebb07439ad8f3422, type: 3}
+      propertyPath: m_SurfaceArc
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067225344009070911, guid: ffde464597ac6a44ebb07439ad8f3422, type: 3}
+      propertyPath: m_UseOneWayGrouping
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3067225344009071043, guid: ffde464597ac6a44ebb07439ad8f3422, type: 3}
