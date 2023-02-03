@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        var hit = Physics2D.OverlapCircle(_feet.position, .1f, LayerMask.GetMask("Default"));
+        var hit = Physics2D.OverlapCircle(_feet.position, .1f, LayerMask.GetMask("Default","Mushroom"));
         bool isGrounded = hit != null;
 
         var horizontal = Input.GetAxis("Horizontal")*_speed;
@@ -58,11 +58,11 @@ public class Player : MonoBehaviour
         {
             rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, _jumpVelocity);
             _fallTimer = 0;
-            _jumpTimer += Time.deltaTime;
+           
         }
-        
+        _jumpTimer += Time.deltaTime;
 
-        if (isGrounded)
+        if (isGrounded && _fallTimer>0)
         {
             _fallTimer = 0;
             _jumpsRemaining = _maxJumps;
