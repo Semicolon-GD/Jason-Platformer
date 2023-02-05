@@ -419,7 +419,7 @@ GameObject:
   - component: {fileID: 142256201}
   m_Layer: 0
   m_Name: snowMid
-  m_TagString: Untagged
+  m_TagString: Slippery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -433,7 +433,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 142256200}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: d28d98900c1c0b14a90e6bd18922f585, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -639,7 +639,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1701d777c09a85740a2c204c5f1d25c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 5
+  _speed: 2
+  _slipFactor: 2
   _jumpVelocity: 8
   _maxJumps: 2
   _feet: {fileID: 977005103}
@@ -3001,6 +3002,10 @@ PrefabInstance:
     - target: {fileID: 3067225344009071043, guid: ffde464597ac6a44ebb07439ad8f3422, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067225344009071043, guid: ffde464597ac6a44ebb07439ad8f3422, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffde464597ac6a44ebb07439ad8f3422, type: 3}
