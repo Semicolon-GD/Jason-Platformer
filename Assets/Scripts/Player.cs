@@ -91,6 +91,7 @@ public class Player : MonoBehaviour
     bool ShouldContinueJump()
     {
         return Input.GetButton($"P{_playerNumber}Jump") && _jumpTimer <= _maxJumpDuration;
+
     }
 
     void Jump()
@@ -137,7 +138,8 @@ public class Player : MonoBehaviour
     void UpdateAnimator()
     {
         bool walking = _horizontal != 0;
-        _animator.SetBool("Walk", _horizontal != 0);
+        _animator.SetBool("Walk", walking);
+        _animator.SetBool("Jump", ShouldContinueJump());
     }
 
     void UpdateIsGrounded()
