@@ -626,7 +626,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 84257459}
-  m_LocalRotation: {x: -0.20933545, y: -0.0045784544, z: -0.0009801603, w: 0.9778327}
+  m_LocalRotation: {x: -0.20933546, y: -0.00457844, z: -0.0009801574, w: 0.9778327}
   m_LocalPosition: {x: -9.856353, y: -7.8374734, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6830,7 +6830,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.5940595
+  orthographic size: 7.76219
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -6853,7 +6853,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: -0.20933545, y: -0.0045784544, z: -0.0009801603, w: 0.9778327}
+  m_LocalRotation: {x: -0.20933546, y: -0.00457844, z: -0.0009801574, w: 0.9778327}
   m_LocalPosition: {x: -9.856353, y: -7.8374734, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7716,6 +7716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInside: 0
+  _fallSpeed: 9
 --- !u!61 &802053132
 BoxCollider2D:
   m_ObjectHideFlags: 0
