@@ -27,6 +27,8 @@ public class Player : MonoBehaviour
     bool _isGrounded;
     bool _isOnSlipperySurface;
 
+    public int PlayerNumber => _playerNumber;
+
     void Start()
     {
         
