@@ -17,12 +17,10 @@ public class Collector : MonoBehaviour
         _remainingText = GetComponentInChildren<TMP_Text>();
         foreach (var collectible in _collectibles)
         {
-            collectible.SetCollector(this);
+            collectible.onPickedUp += ItemPickedUp;
         }
         _remainingText?.SetText(_collectibles.Count.ToString());
     }
-
-    
 
     public void ItemPickedUp()
     {
