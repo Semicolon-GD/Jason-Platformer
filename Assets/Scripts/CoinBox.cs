@@ -8,11 +8,11 @@ public class CoinBox : MonoBehaviour
     [SerializeField] Sprite _usedSprite;
     int _remainingCoins;
 
-    private void Start()
+    void Start()
     {
         _remainingCoins = _totalCoins;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         var player = collision.collider.GetComponent<Player>();
         if (player == null)
