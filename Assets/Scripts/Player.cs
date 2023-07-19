@@ -26,6 +26,9 @@ public class Player : MonoBehaviour
     float _horizontal;
     bool _isGrounded;
     bool _isOnSlipperySurface;
+    string _jumpButton;
+    string _horizontalAxis;
+    int _layerMask;
 
     public int PlayerNumber => _playerNumber;
 
@@ -39,6 +42,9 @@ public class Player : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _jumpButton = $"P{_playerNumber}Jump";
+        _horizontalAxis = $"P{_playerNumber}Horizontal";
+        _layerMask = LayerMask.GetMask("Default", "Mushroom");
     }
 
     void Update()
@@ -92,7 +98,7 @@ public class Player : MonoBehaviour
 
     bool ShouldContinueJump()
     {
-        return Input.GetButton($"P{_playerNumber}Jump") && _jumpTimer <= _maxJumpDuration;
+        return Input.GetButton(_jumpButton) && _jumpTimer <= _maxJumpDuration;
 
     }
 
@@ -106,7 +112,7 @@ public class Player : MonoBehaviour
 
     bool ShouldStartJump()
     {
-        return Input.GetButtonDown($"P{_playerNumber}Jump") && _jumpsRemaining > 0;
+        return Input.GetButtonDown(_jumpButton) && _jumpsRemaining > 0;
     }
 
     void MoveHorizontal()
@@ -125,7 +131,7 @@ public class Player : MonoBehaviour
 
     void ReadHorizontalInput()
     {
-        _horizontal = Input.GetAxis($"P{_playerNumber}Horizontal") * _speed;
+        _horizontal = Input.GetAxis(_horizontalAxis) * _speed;
     }
 
     void UpdateSpriteDirection()
@@ -146,7 +152,8 @@ public class Player : MonoBehaviour
 
     void UpdateIsGrounded()
     {
-        var hit = Physics2D.OverlapCircle(_feet.position, .1f, LayerMask.GetMask("Default", "Mushroom"));
+         
+        var hit = Physics2D.OverlapCircle(_feet.position, .1f, _layerMask);
         _isGrounded = hit != null;
 
 
