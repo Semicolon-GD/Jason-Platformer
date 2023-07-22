@@ -249,7 +249,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2519484}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.24, y: -3.45, z: 0}
+  m_LocalPosition: {x: -15.74, y: -0.20000005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -822,7 +822,7 @@ GameObject:
   - component: {fileID: 68097602}
   - component: {fileID: 68097601}
   m_Layer: 0
-  m_Name: switchMid
+  m_Name: Toggle Switch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -935,6 +935,60 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _toggleLeft: {fileID: 21300000, guid: 686f857d9a66da54da2966f884269b3c, type: 3}
   _toggleRight: {fileID: 21300000, guid: e4943e77a01211b4d9678659a593c30b, type: 3}
+  _onLeft:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 802053130}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 478026926}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _onRight:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 478026926}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 802053130}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &89376106
 GameObject:
   m_ObjectHideFlags: 0
@@ -13067,7 +13121,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: -0.030587006, y: -0.012834918, z: -0.00039279784, w: 0.9994497}
+  m_LocalRotation: {x: -0.030587027, y: -0.012834882, z: -0.00039279702, w: 0.9994497}
   m_LocalPosition: {x: 1.5758165, y: -4.0275316, z: -100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -44395,7 +44449,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853016995}
-  m_LocalRotation: {x: -0.030587006, y: -0.012834918, z: -0.00039279784, w: 0.9994497}
+  m_LocalRotation: {x: -0.030587027, y: -0.012834882, z: -0.00039279702, w: 0.9994497}
   m_LocalPosition: {x: 1.5758165, y: -4.0275316, z: -100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
