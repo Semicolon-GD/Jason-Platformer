@@ -14,26 +14,11 @@ public class CoinBox : HittableFromBelow
         _remainingCoins = _totalCoins;
     }
 
-
     protected override void Use()
     {
         base.Use();
         Coin.CoinsCollected++;
         _remainingCoins--;
     }
-
-    //void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    var player = collision.collider.GetComponent<Player>();
-    //    if (player == null)
-    //        return;
-    //    if (collision.contacts[0].normal.y > 0 && _remainingCoins > 0)
-    //    {
-    //        Coin.CoinsCollected++;
-    //        _remainingCoins--;
-    //        if (_remainingCoins <= 0)
-    //            GetComponent<SpriteRenderer>().sprite = _usedSprite;
-
-    //    }
-    //}                   
+               
 }
