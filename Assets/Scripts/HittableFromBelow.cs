@@ -33,7 +33,7 @@ public class HittableFromBelow : MonoBehaviour
     void PlayAnimation()
     {
         if (_animator != null)
-            _animator.SetTrigger("Use");
+            _animator.SetTrigger("Used");
     }
 
     protected virtual void Use()
