@@ -31,7 +31,7 @@ public class PushButtonSwitch : MonoBehaviour
     void BecomePressed()
     {
         _spriteRenderer.sprite = _pressedSprite;
-        _onPressed?.Invoke();
+        _onPressed.Invoke();
     }
 
     void OnTriggerExit2D(Collider2D collision)
@@ -45,6 +45,8 @@ public class PushButtonSwitch : MonoBehaviour
 
     void BecomeReleased()
     {
+        if (_onReleased.GetPersistentEventCount() == 0)
+            return;
         _spriteRenderer.sprite = _releasedSprite;
         _onReleased?.Invoke();
     }
