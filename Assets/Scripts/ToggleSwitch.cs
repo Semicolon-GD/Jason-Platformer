@@ -3,6 +3,8 @@ using UnityEngine.Events;
 
 public class ToggleSwitch : MonoBehaviour
 {
+    [SerializeField] ToggleDirection _startDirection=ToggleDirection.Center;
+
     [SerializeField] Sprite _toggleLeft;
     [SerializeField] Sprite _toggleRight;
     [SerializeField] Sprite _toggleCenter;
@@ -25,6 +27,7 @@ public class ToggleSwitch : MonoBehaviour
     void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        SetToogleDirection(_startDirection, true);
         
     }
 
@@ -50,9 +53,9 @@ public class ToggleSwitch : MonoBehaviour
 
     }
 
-    void SetToogleDirection(ToggleDirection direction)
+    void SetToogleDirection(ToggleDirection direction, bool force=false)
     {
-        if (_currentDirection == direction)
+        if (force == false && _currentDirection == direction)
             return;
 
         _currentDirection = direction;
@@ -74,7 +77,28 @@ public class ToggleSwitch : MonoBehaviour
                 break;
         }
 
-       
+    }
+
+    void OnValidate()
+    {
+        if (_spriteRenderer == null)
+            _spriteRenderer = GetComponent<SpriteRenderer>();
+
+        ToggleDirection direction = _startDirection;
+        switch (_startDirection)
+        {
+            case ToggleDirection.Left:
+                _spriteRenderer.sprite = _toggleLeft;
+                break;
+            case ToggleDirection.Center:
+                _spriteRenderer.sprite = _toggleCenter;
+                break;
+            case ToggleDirection.Right:
+                _spriteRenderer.sprite = _toggleRight;
+                break;
+            default:
+                break;
+        }
     }
 
 }

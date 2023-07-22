@@ -933,8 +933,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3244069db0744243a3b9a44df7d21a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _startDirection: 1
   _toggleLeft: {fileID: 21300000, guid: 686f857d9a66da54da2966f884269b3c, type: 3}
   _toggleRight: {fileID: 21300000, guid: e4943e77a01211b4d9678659a593c30b, type: 3}
+  _toggleCenter: {fileID: 21300000, guid: f18ace162b1084947a03ce86118557b2, type: 3}
   _onLeft:
     m_PersistentCalls:
       m_Calls:
@@ -978,6 +980,33 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 802053130}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _onCenter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 802053130}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 478026926}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -13098,7 +13127,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 20.176342
+  orthographic size: 22.812132
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
