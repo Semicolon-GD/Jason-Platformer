@@ -1,13 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public static class ScoreSystem 
 {
-   static int _score;
+    public static event Action<int> OnScoreChanged;
+
+    static int _score;
 
     public static void Add(int points)
     {
         _score += points;
+        OnScoreChanged.Invoke(_score);
     }
 }

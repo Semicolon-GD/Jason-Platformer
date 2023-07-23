@@ -14,6 +14,11 @@ public class Coin : MonoBehaviour
             return;
 
         gameObject.SetActive(false);
+        UpdateCoinAndScore();
+    }
+
+    public static void UpdateCoinAndScore()
+    {
         CoinsCollected++;
         ScoreSystem.Add(100);
     }
