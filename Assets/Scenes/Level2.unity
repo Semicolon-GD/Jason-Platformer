@@ -413,7 +413,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1701d777c09a85740a2c204c5f1d25c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerNumber: 1
   _speed: 5
+  _slipFactor: 1
   _jumpVelocity: 8
   _maxJumps: 2
   _feet: {fileID: 977005103}
@@ -1852,7 +1854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d58862f105d6cf46b9b766bf7e9a155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneName: Level1
+  _sceneName: Level3
 --- !u!61 &1881856956
 BoxCollider2D:
   m_ObjectHideFlags: 0

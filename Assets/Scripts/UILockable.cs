@@ -14,5 +14,19 @@ public class UILockable : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+
+    [ContextMenu("Clear a Level Key")]
+    void ClearLevelUnlocked()
+    {
+        var startButton = GetComponent<UIStartLevelButton>();
+        string key = startButton.LevelName + " Unlocked"; //"Level1 Unlocked"
+        PlayerPrefs.DeleteKey(key);
+    }
+
+    [ContextMenu("Clear All Levels")]
+    void ClearAllLevelsUnlocked()
+    {
+        PlayerPrefs.DeleteAll();
+    }
 }
 
