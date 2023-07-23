@@ -2,7 +2,7 @@ using System;
 using TMPro;
 using UnityEngine;
 
-public class UIScore : MonoBehaviour
+public partial class UIScore : MonoBehaviour
 {
     TMP_Text _text;
 
@@ -12,8 +12,11 @@ public class UIScore : MonoBehaviour
         ScoreSystem.OnScoreChanged += UpdateScoreText;
     }
 
+    
+
     void UpdateScoreText(int score)
     {
         _text.SetText(score.ToString());
     }
+   
 }
