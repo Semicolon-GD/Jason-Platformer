@@ -6,6 +6,7 @@ public class Coin : MonoBehaviour
 {
     public static int CoinsCollected;
 
+    
     void OnTriggerEnter2D(Collider2D collision)
     {
         var player = collision.GetComponent<Player>();
@@ -13,8 +14,13 @@ public class Coin : MonoBehaviour
         if (player == null)
             return;
 
-        gameObject.SetActive(false);
+
+        GetComponent<Collider2D>().enabled = false;
+        GetComponent<SpriteRenderer>().enabled = false;
+
         UpdateCoinAndScore();
+
+        GetComponent<AudioSource>().Play();
     }
 
     public static void UpdateCoinAndScore()
