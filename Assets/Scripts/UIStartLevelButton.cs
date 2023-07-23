@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,4 +10,9 @@ public class UIStartLevelButton : MonoBehaviour
     {
         SceneManager.LoadScene(_levelName);
     }
+
+    //private void OnValidate()
+    //{
+    //    GetComponentInChildren<TMP_Text>()?.SetText(_levelName);
+    //}
 }
