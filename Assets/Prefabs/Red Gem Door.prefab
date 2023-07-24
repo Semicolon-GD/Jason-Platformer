@@ -498,7 +498,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74c4788eac432cd4e896dc9a468246f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _collectibles: []
+  _collectibles:
+  - {fileID: 0}
   _onCollectionComplete:
     m_PersistentCalls:
       m_Calls:
