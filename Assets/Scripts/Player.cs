@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
     string _jumpButton;
     string _horizontalAxis;
     int _layerMask;
-
+    AudioSource _jumpSound;
     public int PlayerNumber => _playerNumber;
 
     
@@ -46,6 +46,7 @@ public class Player : MonoBehaviour
         _jumpButton = $"P{_playerNumber}Jump";
         _horizontalAxis = $"P{_playerNumber}Horizontal";
         _layerMask = LayerMask.GetMask("Default", "Mushroom");
+        _jumpSound = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -95,6 +96,8 @@ public class Player : MonoBehaviour
     {
         _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _jumpVelocity);
         _fallTimer = 0;
+        if (_jumpSound.isPlaying == false)
+            _jumpSound.Play();
     }
 
     bool ShouldContinueJump()
@@ -109,6 +112,8 @@ public class Player : MonoBehaviour
         _jumpsRemaining--;
         _fallTimer = 0;
         _jumpTimer = 0;
+        if (_jumpSound.isPlaying == false)
+            _jumpSound.Play();
     }
 
     bool ShouldStartJump()
