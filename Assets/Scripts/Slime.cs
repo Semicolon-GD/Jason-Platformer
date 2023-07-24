@@ -8,12 +8,14 @@ public class Slime : MonoBehaviour
     [SerializeField] Transform _rightSensor;
     [SerializeField] Sprite _deadSprite;
     Rigidbody2D _rigidbody2D;
+    AudioSource _audioSource;
     float _direction = -1;
     
 
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -71,7 +73,10 @@ public class Slime : MonoBehaviour
         GetComponent<Rigidbody2D>().simulated = false;
         var spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = _deadSprite;
+        if (_audioSource != null)
+            _audioSource.Play();
         float alpha = 1;
+
         while (alpha>0)
         {
             yield return null;
