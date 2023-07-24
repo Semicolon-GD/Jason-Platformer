@@ -5,7 +5,8 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     public static int CoinsCollected;
-
+    [SerializeField] List<AudioClip> _clips;
+                    
     
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,7 +21,12 @@ public class Coin : MonoBehaviour
 
         UpdateCoinAndScore();
 
-        GetComponent<AudioSource>().Play();
+        if (_clips.Count > 0)
+            GetComponent<AudioSource>().PlayOneShot(_clips[Random.Range(0, _clips.Count)]);
+        else
+            GetComponent<AudioSource>().Play();
+       
+       
     }
 
     public static void UpdateCoinAndScore()
