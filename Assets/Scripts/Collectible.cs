@@ -23,15 +23,6 @@ public  class Collectible : MonoBehaviour
         if (audioSource != null)
             audioSource.Play();
 
-        while (audioSource.isPlaying)
-        {
-            if (audioSource.isPlaying==true)
-            {
-                continue;
-            }
-            gameObject.SetActive(false);
-        }
-        
 
     }
 }
