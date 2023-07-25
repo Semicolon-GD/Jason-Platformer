@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fly : MonoBehaviour
+public class Fly : MonoBehaviour, ITakeDamage
 {
     Vector2 _startPosition;
     [SerializeField]Vector2 _direction=Vector2.up;
@@ -25,5 +25,8 @@ public class Fly : MonoBehaviour
         }
     }
 
-   
+    public void TakeDamage()
+    {
+        gameObject.SetActive(false);
+    }
 }

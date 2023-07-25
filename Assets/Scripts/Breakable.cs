@@ -1,8 +1,13 @@
 using System;
 using UnityEngine;
 
-public class Breakable : MonoBehaviour
+public class Breakable : MonoBehaviour, ITakeDamage
 {
+    public void TakeDamage()
+    {
+        TakeHit();
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         var player = collision.collider.GetComponent<Player>();
