@@ -37268,6 +37268,26 @@ PrefabInstance:
       propertyPath: _speed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4746092232355278693, guid: 23a1edb11367b7c47a2c836b51943701, type: 3}
+      propertyPath: _breaking
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746092232355278693, guid: 23a1edb11367b7c47a2c836b51943701, type: 3}
+      propertyPath: _airBreaking
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746092232355278693, guid: 23a1edb11367b7c47a2c836b51943701, type: 3}
+      propertyPath: _acceleration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746092232355278693, guid: 23a1edb11367b7c47a2c836b51943701, type: 3}
+      propertyPath: _decceleration
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746092232355278693, guid: 23a1edb11367b7c47a2c836b51943701, type: 3}
+      propertyPath: _airAcceleration
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4746092232355278696, guid: 23a1edb11367b7c47a2c836b51943701, type: 3}
       propertyPath: m_RootOrder
       value: 3

@@ -18,6 +18,10 @@ public class Player : MonoBehaviour
     [SerializeField] float _downPull=5;
     [SerializeField] float _maxJumpDuration=.1f;
     [SerializeField] float _wallSlideSpeed = 1f;
+    [SerializeField] float _acceleration = 1;
+    [SerializeField] float _breaking = 1;
+    [SerializeField] float _airAcceleration = 1;
+    [SerializeField] float _airBreaking = 1;
 
     Vector2 _startPosition;
     int _jumpsRemaining;
@@ -33,7 +37,6 @@ public class Player : MonoBehaviour
     string _horizontalAxis;
     int _layerMask;
     AudioSource _jumpSound;
-   
 
     public int PlayerNumber => _playerNumber;
 
@@ -176,10 +179,13 @@ public class Player : MonoBehaviour
 
     void MoveHorizontal()
     {
+        float smoothnessMultiplier = _horizontal == 0 ? _breaking : _acceleration;
+        if (_isGrounded==false)
+            smoothnessMultiplier = _horizontal == 0 ? _airBreaking : _airAcceleration;
         var newHorizontal = Mathf.Lerp(
             _rigidbody2D.velocity.x,
             _horizontal*_speed,
-            Time.deltaTime);
+            Time.deltaTime* smoothnessMultiplier);
         _rigidbody2D.velocity = new Vector2(newHorizontal , _rigidbody2D.velocity.y);
     }
     void SlipHorizontal()
