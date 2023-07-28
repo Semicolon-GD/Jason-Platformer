@@ -7,15 +7,15 @@ public class Player : MonoBehaviour
 {
     [SerializeField] int _playerNumber = 1;
     [Header("Movement")]
-    [SerializeField] float _speed = 1;
-    [SerializeField] float _slipFactor = 1;
+    [SerializeField] float _speed = 2;
+    [SerializeField] float _slipFactor = 2;
     [Header("Jump")]
-    [SerializeField] float _jumpVelocity = 10;
+    [SerializeField] float _jumpVelocity = 8;
     [SerializeField] int _maxJumps = 2;
     [SerializeField] Transform _feet;
     [SerializeField] Transform _leftSensor;
     [SerializeField] Transform _rightSensor;
-    [SerializeField] float _downPull=5;
+    [SerializeField] float _downPull=.1f;
     [SerializeField] float _maxJumpDuration=.1f;
     [SerializeField] float _wallSlideSpeed = 1f;
     [SerializeField] float _acceleration = 1;

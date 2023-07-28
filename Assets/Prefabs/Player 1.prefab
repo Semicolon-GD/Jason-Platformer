@@ -198,6 +198,11 @@ MonoBehaviour:
   _rightSensor: {fileID: 245071227}
   _downPull: 0.1
   _maxJumpDuration: 0.2
+  _wallSlideSpeed: 1
+  _acceleration: 10
+  _breaking: 10
+  _airAcceleration: 2
+  _airBreaking: 0
 --- !u!95 &4746092232355278692
 Animator:
   serializedVersion: 5
